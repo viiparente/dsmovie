@@ -1,6 +1,6 @@
 function App() {
   return (
-    <h1>Home Page Front End</h1>
+    <h1>DSMovie</h1>
     );
 }
 
