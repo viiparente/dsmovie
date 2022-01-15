@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# ![DevSuperior logo](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/devsuperior-logo-small.png) Semana Spring React
+Projeto de app full-stack responsivo de avaliação de filmes, realizado em monorepo e com armazenamento em banco de dados relacional. Promovido o evento pelo professor [Nelio Alves](https://github.com/acenelio).
+O site no ar já se comunicando com o banco de dados fornecido pelo Heroku <a href="https://viiparente-dsmovie.netlify.app/" target="_blank">Clique aqui</a>.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tecnologias
+- React native: Front-end 
+- Spring Boot: Back-end
 
-## Available Scripts
+## Funcionalidades
+- Tela Home (início): Tela inicial, mostra a lista de filmes cadastradas com páginas de navegação (max 12 itens).
+- Tela de Cadastro: Tela para cadastro de email e da avaliação para o filme que foi indicado pela Tela Home.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Modelo conceitual
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Image](https://raw.githubusercontent.com/devsuperior/bds-assets/main/sds/dsmovie-dominio.png "Modelo conceitual")
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Padrão de camadas adotado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Image](https://github.com/devsuperior/bds-assets/raw/main/sds/padrao-camadas.png "Padrão camadas")
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Lógica utilizada para salvar avaliação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1) Informar email, id do filme e valor da avaliação (1 a 5).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2) Recuperar usuário do banco de dados pelo email. Se o usuário não existir, insira no banco.
 
-### `yarn eject`
+3) Salvar a avaliação do usuário para o dado filme.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4) Recalcular a avaliação média do filme e salvar no banco de dados.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Image](https://raw.githubusercontent.com/devsuperior/bds-assets/main/sds/dsmovie-objs.png "Padrão camadas")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Realização
+[DevSuperior - Escola de programação](https://devsuperior.com.br)
 
-## Learn More
+[![DevSuperior no Instagram](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/ig-icon.png)](https://instagram.com/devsuperior.ig)
+[![DevSuperior no Youtube](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/yt-icon.png)](https://youtube.com/devsuperior)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
